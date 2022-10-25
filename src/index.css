@@ -11,3 +11,18 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.bg-green{
+  background-color: green;
+}
+.bg-aqua{
+  background-color: aqua;
+}
+.bg-darkolivegreen{
+  background-color: darkolivegreen;
+}
+.bg-darkkhaki{
+  background-color: darkkhaki;
+}
+.bg-burlywood{
+  background-color: burlywood;
+}
