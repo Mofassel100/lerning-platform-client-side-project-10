@@ -1,8 +1,8 @@
 import React, { createContext } from 'react';
 import { useState } from 'react';
 
+export  const AuthContext = createContext()
 const UseContext = ({children}) => {
-    const AuthContext = createContext()
 
 const [user,setUsers]= useState()
 const [loader,setLoader]= useState(true);
