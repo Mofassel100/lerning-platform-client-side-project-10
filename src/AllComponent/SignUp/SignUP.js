@@ -6,13 +6,13 @@ import { Link } from 'react-router-dom';
 import { AuthContext } from '../../Context/UseContext';
 
 const SignUP = () => {
-    const {githuSignInAcco}= useContext(AuthContext)
+    const {githuSignInAcco,googleSignInAccoun}= useContext(AuthContext)
     return (
         <div>
             <div className='w-75 mx-auto'>
             <h1 className='text-center mx-auto my-2'>Sign Up Now</h1>
             <div className='text-center bg bg-danger w-50 mx-auto py-2 rounded my-3'>
-                <Link to='/register'><button className='px-5 py-2 rounded'>Sign up Google</button></Link>
+                <Link ><button onClick={googleSignInAccoun} className='px-5 py-2 rounded'>Sign up Google</button></Link>
             </div>
             <div className='text-center bg bg-danger w-50 mx-auto py-2 rounded my-3'>
                 <Link ><button className='px-5 py-2 rounded' onClick={githuSignInAcco}>Sign up Github</button></Link>
