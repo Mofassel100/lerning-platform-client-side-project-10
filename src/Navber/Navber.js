@@ -25,7 +25,8 @@ const Navber = () => {
             style={{ maxHeight: '100px' }}
             navbarScroll
           >
-            <Nav.Link href="#action1">Home</Nav.Link>
+            
+            <Nav.Link ><Link to='/'>Home</Link></Nav.Link>
             <Nav.Link ><Link to='/course' className='text-2xl'>Courses</Link></Nav.Link>
             <div className="header-toggle-buttons">
         <button onClick={() => toggleTheme()}>{theme}</button>
@@ -54,9 +55,9 @@ const Navber = () => {
                 <ReactTooltip />
                 <button onClick={logOotsPage}>Log Out</button>
               </> : <>
-                <Nav>
                   <Nav.Link ><Link className='me-2' to='/login'>Log In</Link></Nav.Link>
                   <Nav.Link >    <Link to='/signUp' className='mx-2'>Sign Up</Link> </Nav.Link>
+                <Nav>
 
                 </Nav>
               </>

@@ -1,5 +1,6 @@
 import React from 'react';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import Blog from '../AllComponent/Blog/Blog';
 import Course from '../AllComponent/Course/Course';
 import DetailsPage from '../AllComponent/Course/DetailsPage/DetailsPage';
 import FAQ from '../AllComponent/FAQ/FAQ';
@@ -54,7 +55,12 @@ loader: ({params})=>fetch(`http://localhost:5000/homepage/${params.id}`)
     {
         path:'/primium',
         element:<PrivetRouter><PrimiumAccess></PrimiumAccess></PrivetRouter>
+    },
+    {
+        path:'/blog',
+        element:<Blog></Blog>
     }
+
 ]
 
 }
