@@ -2,6 +2,7 @@ import React from 'react';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Course from '../AllComponent/Course/Course';
 import DetailsPage from '../AllComponent/Course/DetailsPage/DetailsPage';
+import FAQ from '../AllComponent/FAQ/FAQ';
 import Home from '../AllComponent/Home/Home';
 import Login from '../AllComponent/Login/Login';
 import Register from '../AllComponent/Register/Register';
@@ -43,6 +44,10 @@ loader: ({params})=>fetch(`http://localhost:5000/homepage/${params.id}`)
     {
         path:'/signUp',
         element:<SignUP></SignUP>
+    },
+    {
+        path:'faq',
+        element:<FAQ></FAQ>
     }
 ]
 

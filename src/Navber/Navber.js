@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { Image } from 'react-bootstrap';
+import { Image, Tooltip } from 'react-bootstrap';
 
 import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
@@ -8,9 +8,10 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../Context/UseContext';
+import ReactTooltip from 'react-tooltip';
 
 const Navber = () => {
-    const {user}= useContext(AuthContext)
+    const {user,logOotsPage}= useContext(AuthContext)
     return (
         <Navbar bg="light" expand="lg">
         <Container fluid>
@@ -20,6 +21,7 @@ const Navber = () => {
           <Navbar.Collapse id="navbarScroll">
             <Nav
               className="me-auto my-2 my-lg-0"
+
               style={{ maxHeight: '100px' }}
               navbarScroll
             >
@@ -42,25 +44,38 @@ const Navber = () => {
          
             </Nav>
             <Form className="d-flex me-2">
+             
+             
+
+            
+              
+            
                
                 {
-                    user? <>
-                    <Nav.Link > <Link>{user?.user?.disPlayName}</Link></Nav.Link>
-                    <Nav.Link > <Link><Image src={user?.photoURL}></Image></Link></Nav.Link>
-                    <Nav.Link >  <Link to='logOut'>Log Out</Link></Nav.Link>
+                    user?.uid? <>
+                     <p className='mx-2'>{}</p>
+                     
+                     <p data-tip={user?.displayName}>  <Image className='mx-3' roundedCircle style={{width:'40px'}} src={user?.photoURL}/></p>
+                     <ReactTooltip />
+                   
+                 
+                    <button onClick={logOotsPage}>Log Out</button>
                     </>: <>
                     <Nav>
                       <Nav.Link ><Link className='me-2' to='/login'>Log In</Link></Nav.Link>
-                      <Nav.Link >    <Link to='/signUp' className='ms-2'>Sign Up</Link> </Nav.Link>
-                      <Nav.Link ><Link to='/blog'>Blog</Link></Nav.Link>
+                      <Nav.Link >    <Link to='/signUp' className='mx-2'>Sign Up</Link> </Nav.Link>
+                    
                       </Nav>
                    </>
                     
                   
                 }
+                  <Nav.Link ><Link to='/faq' className='mx-2 '>FAQ</Link></Nav.Link>
+                  <Nav.Link ><Link to='/blog' className='mx-2 '>Blog</Link></Nav.Link>
 
             </Form>
           </Navbar.Collapse>
+         
         </Container>
       </Navbar>
     );

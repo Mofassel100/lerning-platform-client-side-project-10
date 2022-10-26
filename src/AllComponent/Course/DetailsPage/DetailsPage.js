@@ -1,30 +1,32 @@
 import React from 'react';
 import {  useLoaderData } from 'react-router-dom';
-// import Button from 'react-bootstrap/Button';
-// import Card from 'react-bootstrap/Card';
+import Button from 'react-bootstrap/Button';
+import Card from 'react-bootstrap/Card';
+
 
 const DetailsPage = () => {
-    const datas = useLoaderData()
-    console.log(datas);
+    const detailsData = useLoaderData()
+    console.log(detailsData);
+    const {details,img,name,registered}=detailsData;
 
-    // const {picture,title,about,age}= datas
     return (
-        <div>
-            <h1>{datas.title}</h1>
-            {/* {datas.map(data=><>
-            <Link>{data?.title}</Link></>)} */}
-             {/* <Card style={{ width: '18rem' }}>
-      <Card.Img variant="top" src={picture} />
+        <div className='mx-auto' >
+          <div className=''>
+          <Card style={{ width: '18rem' }}>
+      <Card.Img variant="top" src="holder.js/100px180" />
       <Card.Body>
-        <Card.Title>{title}</Card.Title>
+        <Card.Title>Card Title</Card.Title>
         <Card.Text>
-       {about}
+          Some quick example text to build on the card title and make up the
+          bulk of the card's content.
         </Card.Text>
-        <p>{age}</p>
         <Button variant="primary">Go somewhere</Button>
       </Card.Body>
-    </Card> */}
-        </div>
+    </Card>
+          </div>
+           
+    
+   </div>
     );
 };
 
