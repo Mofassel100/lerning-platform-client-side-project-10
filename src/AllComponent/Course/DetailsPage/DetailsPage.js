@@ -12,10 +12,10 @@ const DetailsPage = () => {
 
     return (
         <div className='mx-auto' >
-          <div className='div-container w-75'>
-          <Card className='card-container ' style={{ width: '' }}>
+          <div className='div-container w-75 mx-auto'>
+          <Card className='card-container rounded ' style={{ width: '' }}>
       <Card.Img variant="top" src={img} />
-      <Card.Body>
+      <Card.Body className='d-color'>
         <Card.Title className='titles'>{name}</Card.Title>
         <Card.Text>
          {details}

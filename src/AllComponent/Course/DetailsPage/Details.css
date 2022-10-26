@@ -7,7 +7,16 @@
     background-color: steelblue
 }
 .card-container{
-    background-color:khaki;
+   
+    margin:10px;
+    border-radius: 10px;
+}
+.div-container img {
+    height: 500px;
+    background-color:rgb(138, 128, 38);
+}
+.d-color{
+
 }
 .titles{
     color: royalblue;
@@ -24,6 +33,13 @@
     padding: 10px 15px;
    
 }
-.homepage-container{
-    background-color: darkseagreen;
+.homepage{
+    
+    margin: 15px 20px;
+}
+.bodys{
+    background-color: bisque;
+}
+.bg-color{
+    background-color: bisque; 
 }

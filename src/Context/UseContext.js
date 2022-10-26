@@ -61,7 +61,7 @@ const newUserCreate= (email,password)=>{
 
 
 
-const allInfoData = {user,loader,setLoader,newUserCreate,githuSignInAcco,googleSignInAccoun,newUserCreate,ProfileUpdates,logOotsPage,logInPage }
+const allInfoData = {user,loader,setLoader,newUserCreate,githuSignInAcco,googleSignInAccoun,newUserCreate,ProfileUpdates,logOotsPage,logInPage,loader }
     return (
         <div>
             <AuthContext.Provider value={allInfoData}>

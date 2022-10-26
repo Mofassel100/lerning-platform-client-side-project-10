@@ -55,14 +55,6 @@ loader: ({params})=>fetch(`http://localhost:5000/homepage/${params.id}`)
 
 
 
-
-
-
-
-
-
-
-
     ])
     
     return (
