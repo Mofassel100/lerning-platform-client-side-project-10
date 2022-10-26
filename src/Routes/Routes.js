@@ -5,9 +5,11 @@ import DetailsPage from '../AllComponent/Course/DetailsPage/DetailsPage';
 import FAQ from '../AllComponent/FAQ/FAQ';
 import Home from '../AllComponent/Home/Home';
 import Login from '../AllComponent/Login/Login';
+import PrimiumAccess from '../AllComponent/PremiumAccess/PrimiumAccess';
 import Register from '../AllComponent/Register/Register';
 import SignUP from '../AllComponent/SignUp/SignUP';
 import Main from '../Layout/Main/Main';
+import PrivetRouter from './PrivetRouter';
 
 const Routes = () => {
     const router = createBrowserRouter([
@@ -48,6 +50,10 @@ loader: ({params})=>fetch(`http://localhost:5000/homepage/${params.id}`)
     {
         path:'faq',
         element:<FAQ></FAQ>
+    },
+    {
+        path:'/primium',
+        element:<PrivetRouter><PrimiumAccess></PrimiumAccess></PrivetRouter>
     }
 ]
 

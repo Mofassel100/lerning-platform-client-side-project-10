@@ -24,7 +24,7 @@ const DetailsPage = () => {
          {registered}
         </Card.Text>
 
-        <Button variant="primary"><Link><button className='bg-primary text-white'>Premium access</button></Link></Button>
+        <Button variant="primary"><Link to='/primium' ><button className='bg-primary  text-white'>Premium access</button></Link></Button>
       </Card.Body>
     </Card>
           </div>

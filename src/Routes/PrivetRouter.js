@@ -7,9 +7,7 @@ const PrivetRouter = ({children}) => {
     const {user,loader}= useContext(AuthContext)
     const location =useLocation()
     if(loader){
-        return <>  <Spinner animation="border" variant="success" />
-        <Spinner animation="border" variant="danger" />
-        <Spinner animation="border" variant="warning" /></>
+        return  <Spinner animation="border" variant="success" />
     }
     if(user && user.uid){
         return children;
