@@ -1,0 +1,29 @@
+.div-container{
+
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    margin-left: 90px;
+    background-color: steelblue
+}
+.card-container{
+    background-color:khaki;
+}
+.titles{
+    color: royalblue;
+   
+}
+.times{
+    background-color: seagreen;
+    padding: 10px ;
+    
+    
+}
+.lef-side{
+    background-color:bisque;
+    padding: 10px 15px;
+   
+}
+.homepage-container{
+    background-color: darkseagreen;
+}

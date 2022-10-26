@@ -1,7 +1,8 @@
 import React from 'react';
-import {  useLoaderData } from 'react-router-dom';
+import {  Link, useLoaderData } from 'react-router-dom';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
+import './Details.css'
 
 
 const DetailsPage = () => {
@@ -11,16 +12,19 @@ const DetailsPage = () => {
 
     return (
         <div className='mx-auto' >
-          <div className=''>
-          <Card style={{ width: '18rem' }}>
-      <Card.Img variant="top" src="holder.js/100px180" />
+          <div className='div-container w-75'>
+          <Card className='card-container ' style={{ width: '' }}>
+      <Card.Img variant="top" src={img} />
       <Card.Body>
-        <Card.Title>Card Title</Card.Title>
+        <Card.Title className='titles'>{name}</Card.Title>
         <Card.Text>
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
+         {details}
         </Card.Text>
-        <Button variant="primary">Go somewhere</Button>
+        <Card.Text className='times'>
+         {registered}
+        </Card.Text>
+
+        <Button variant="primary"><Link><button className='bg-primary text-white'>Premium access</button></Link></Button>
       </Card.Body>
     </Card>
           </div>

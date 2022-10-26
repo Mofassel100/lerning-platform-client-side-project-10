@@ -6,9 +6,9 @@ import { Link } from 'react-router-dom';
 const HomePage = ({datas}) => {
 
     return (
-        <div>
+        <div className='homepage-container'>
          {datas.map(data=><>key={data?.id}
-            <Card>
+            <Card className='homepage-container'>
             <Card.Body>
           <Card.Text>
            {data?.title}
