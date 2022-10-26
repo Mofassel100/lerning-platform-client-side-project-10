@@ -7,7 +7,7 @@ import HomePage from './HomePage/HomePage';
 import { useLoaderData } from 'react-router-dom';
 const Course = () => {
   const datas = useLoaderData()
-  console.log(datas);
+
     return (
         <div>
 

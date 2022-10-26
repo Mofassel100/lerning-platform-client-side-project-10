@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button } from 'react-bootstrap';
+
 import Card from 'react-bootstrap/Card';
 import { Link } from 'react-router-dom';
 
@@ -15,7 +15,7 @@ const HomePage = ({datas}) => {
           </Card.Text>
         </Card.Body>
         <Card.Img variant="bottom" src={data?.picture}/>
-        <Link to={`/detailspage/:${data?.id}`}><button>Details</button></Link>
+        <Link to={`/detailspage/${data?.id}`}><button>Details</button></Link>
 
 
         </Card>

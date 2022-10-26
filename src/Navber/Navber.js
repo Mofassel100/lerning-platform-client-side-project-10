@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
-import Button from 'react-bootstrap/Button';
+import { Image } from 'react-bootstrap';
+
 import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
@@ -13,7 +14,8 @@ const Navber = () => {
     return (
         <Navbar bg="light" expand="lg">
         <Container fluid>
-          <Navbar.Brand href="#">Navbar scroll</Navbar.Brand>
+          <Image className='rounded-circle mx-2'style={{width:'40px'}} src='https://cdn-icons-png.flaticon.com/512/1688/1688451.png'></Image>
+          <Navbar.Brand style={{color:'',font:'bold'}} className='text-primary'>Learn Skills</Navbar.Brand>
           <Navbar.Toggle aria-controls="navbarScroll" />
           <Navbar.Collapse id="navbarScroll">
             <Nav
@@ -22,33 +24,39 @@ const Navber = () => {
               navbarScroll
             >
               <Nav.Link href="#action1">Home</Nav.Link>
-              <Nav.Link href="#action2">Link</Nav.Link>
-              <NavDropdown title="Link" id="navbarScrollingDropdown">
-                <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
+              <Nav.Link ><Link to='/course' className='text-2xl'>Courses</Link></Nav.Link>
+              {/* <div>
+                    
+                </div> */}
+             
+              <NavDropdown title="Thems" id="navbarScrollingDropdown">
+                <NavDropdown.Item href="#action3">light</NavDropdown.Item>
                 <NavDropdown.Item href="#action4">
-                  Another action
+              Derk
                 </NavDropdown.Item>
                 <NavDropdown.Divider />
                 <NavDropdown.Item href="#action5">
-                  Something else here
+        
                 </NavDropdown.Item>
               </NavDropdown>
-              <Nav.Link href="#" disabled>
-                Link
-              </Nav.Link>
+         
             </Nav>
             <Form className="d-flex me-2">
-                <div>
-                    <Link to='/course'>Course</Link>
-                </div>
+               
                 {
                     user? <>
-                    <Link>{user?.user?.disPlayName}</Link>
-                    <Link>{user?.user?.photoURL}</Link>
-                    <Link to='logOut'>Log Out</Link>
+                    <Nav.Link > <Link>{user?.user?.disPlayName}</Link></Nav.Link>
+                    <Nav.Link > <Link><Image src={user?.photoURL}></Image></Link></Nav.Link>
+                    <Nav.Link >  <Link to='logOut'>Log Out</Link></Nav.Link>
                     </>: <>
-                    <Link className='me-2' to='/login'>Log In</Link>
-                    <Link to='/register' className='ms-2'>Register</Link></>
+                    <Nav>
+                      <Nav.Link ><Link className='me-2' to='/login'>Log In</Link></Nav.Link>
+                      <Nav.Link >    <Link to='/signUp' className='ms-2'>Sign Up</Link> </Nav.Link>
+                      <Nav.Link ><Link to='/blog'>Blog</Link></Nav.Link>
+                      </Nav>
+                   </>
+                    
+                  
                 }
 
             </Form>

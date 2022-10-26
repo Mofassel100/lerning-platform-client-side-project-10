@@ -5,6 +5,7 @@ import DetailsPage from '../AllComponent/Course/DetailsPage/DetailsPage';
 import Home from '../AllComponent/Home/Home';
 import Login from '../AllComponent/Login/Login';
 import Register from '../AllComponent/Register/Register';
+import SignUP from '../AllComponent/SignUp/SignUP';
 import Main from '../Layout/Main/Main';
 
 const Routes = () => {
@@ -38,6 +39,10 @@ loader: ({params})=>fetch(`http://localhost:5000/homepage/${params.id}`)
     {
         path:'/register',
         element:<Register></Register>
+    },
+    {
+        path:'/signUp',
+        element:<SignUP></SignUP>
     }
 ]
 
