@@ -53,8 +53,10 @@ loader: ({params})=>fetch(`http://localhost:5000/homepage/${params.id}`)
         element:<FAQ></FAQ>
     },
     {
-        path:'/primium',
-        element:<PrivetRouter><PrimiumAccess></PrimiumAccess></PrivetRouter>
+        path:'/primium/:id',
+        element:<PrivetRouter><PrimiumAccess></PrimiumAccess></PrivetRouter>,
+        loader: ({params})=>fetch(`http://localhost:5000/homepage/${params.id}`)
+      
     },
     {
         path:'/blog',

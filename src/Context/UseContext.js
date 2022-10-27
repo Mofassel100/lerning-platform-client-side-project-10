@@ -3,6 +3,7 @@ import { useState } from 'react';
 import {createUserWithEmailAndPassword, getAuth, GithubAuthProvider, GoogleAuthProvider, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile} from 'firebase/auth'
 import app from '../Firebase.Config/Firebase.Config';
 import { useEffect } from 'react';
+import PrimiumAccess from '../AllComponent/PremiumAccess/PrimiumAccess';
 
 export  const AuthContext = createContext()
 const githubProbider = new GithubAuthProvider();
@@ -11,22 +12,26 @@ const googlrProvider = new GoogleAuthProvider();
 const auth = getAuth(app)
 
 
+
 // -----------toggle------------------
-const getTheme = () => {
-    const theme = localStorage.getItem("theme");
-    if (!theme) {
-      // Default theme is taken as dark-theme
-      localStorage.setItem("theme", "dark-theme");
-      return "dark-theme";
-    } else {
-      return theme;
-    }
-  };
-  
 
-
-// -------------------------
 const UseContext = ({children}) => {
+    const [data,setData]= useState()
+    const getTheme = () => {
+        const theme = localStorage.getItem("theme");
+        if (!theme) {
+          // Default theme is taken as dark-theme
+          localStorage.setItem("theme", "dark-theme");
+          return "dark-theme";
+        } else {
+          return theme;
+        }
+      };
+      
+    
+    
+    // -------------------------
+    
 
 
     // ----toggle---
@@ -111,7 +116,7 @@ const unsubsCriber = onAuthStateChanged(auth,currentUser=>{
 
 const allInfoData = {user,loader,setLoader,newUserCreate,githuSignInAcco,googleSignInAccoun,newUserCreate,ProfileUpdates,logOotsPage,logInPage,loader, theme,
     setTheme,
-    toggleTheme, }
+    toggleTheme,data,setData }
     return (
         <div>
             <AuthContext.Provider value={allInfoData}>

@@ -3,12 +3,19 @@ import {  Link, useLoaderData } from 'react-router-dom';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import './Details.css'
+import { useContext } from 'react';
+import { AuthContext } from '../../../Context/UseContext';
 
 
 const DetailsPage = () => {
     const detailsData = useLoaderData()
-    console.log(detailsData);
-    const {details,img,name,registered}=detailsData;
+
+
+    const {details,img,name,registered,id}=detailsData;
+const {setData}= useContext(AuthContext)
+
+
+
 
     return (
         <div className='mx-auto' >
@@ -24,7 +31,7 @@ const DetailsPage = () => {
          {registered}
         </Card.Text>
 
-        <Button variant="primary"><Link to='/primium' ><button className='bg-primary  text-white'>Premium access</button></Link></Button>
+        <Button variant="primary"><Link to={`/primium/${id}`} ><button className='bg-primary  text-white'>Premium access</button></Link></Button>
       </Card.Body>
     </Card>
           </div>
