@@ -1,3 +1,27 @@
+
+
+Project site name :
+# Learning Skills
+
+# My Page Live link site :  https://online-learning-course-releted.web.app
+
+
+## use React Hooks :
+1.useREf()
+2.useContext()
+# ohers informations:
+::pdf , useSTAte , Home,detail page
+2. firebase deploy
+3. new server create
+4.font incon use
+5.react-hot-toast
+6.react bootstrap
+
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

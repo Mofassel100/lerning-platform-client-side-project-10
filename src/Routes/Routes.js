@@ -3,6 +3,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Blog from '../AllComponent/Blog/Blog';
 import Course from '../AllComponent/Course/Course';
 import DetailsPage from '../AllComponent/Course/DetailsPage/DetailsPage';
+import Errorpage from '../AllComponent/Course/DetailsPage/ErrorPage/Errorpage';
 import FAQ from '../AllComponent/FAQ/FAQ';
 import Home from '../AllComponent/Home/Home';
 import Login from '../AllComponent/Login/Login';
@@ -17,6 +18,7 @@ const Routes = () => {
 {
 path:'/',
 element:<Main></Main>,
+errorElement:<Errorpage/>,
 children:[
     {
         path:'/',
