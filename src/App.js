@@ -27,9 +27,9 @@ const toggleinfo= {toggleTheme}
   return (
     <div >
       <ToogleContext.Provider value={toggleinfo}>
+      <Routes></Routes>
       <ThemeProvider theme={theme === 'light' ? lightTheme : darkTheme}>
       <GlobalStyles />
-      <Routes></Routes>
      </ThemeProvider>
       </ToogleContext.Provider>
 
