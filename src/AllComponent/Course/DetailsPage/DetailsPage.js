@@ -20,7 +20,7 @@ const PrintRef = useRef()
 const handlePagePrints = useReactToPrint({
   content: () =>PrintRef.current,
   documentTitle :'Development',
-  onAfterPrint:()=>alert('Print Sucess')
+  onAfterPrint:()=>toast.successf('Print Sucess')
 })
 
 
@@ -29,7 +29,7 @@ const handlePagePrints = useReactToPrint({
       <div className='print'>
        
 
-        <div className='detailss'>
+        <div className='home-css'>
           <div ref={PrintRef} className='mx-auto add' >
             <div  className='div-container w-75 mx-auto'>
               <Card className='card-container rounded ' style={{ width: '' }}>
@@ -53,8 +53,11 @@ const handlePagePrints = useReactToPrint({
         </div>
 {/* 
 <ReactToPrint trigger={()=><button>Print</button>} content={()=>PrintRef.current}/> */}
+<div className='m-2 text-center'>
 <FaPrint onClick={handlePagePrints } className='text-red ms-3 '></FaPrint>
-<button className='p-2 mb-3 text-primary bg-aqua' onClick={handlePagePrints }>Print</button>
+<button className='p-2 mb-3 ms-3 text-primary bg-aqua' onClick={handlePagePrints }>Print</button>
+</div>
+
 
       </div>
     </div>

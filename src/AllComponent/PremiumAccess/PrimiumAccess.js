@@ -10,8 +10,8 @@ const PrimiumAccess = () => {
     console.log(data);
     const {auth,price,time,name}= data;
     return (
-        <div className='div-container my-5 py-3'>
- <Card className='homepag' style={{ width: '27rem' }}>
+        <div className='home-css  my-5 py-3'>
+ <Card className=' bg-burlywood ' style={{ width: '27rem' }}>
       <Card.Body>
         <Card.Title className='titles'>{name}</Card.Title>
         <Card.Subtitle className="mb-2 ">Total Price : {price}</Card.Subtitle>
