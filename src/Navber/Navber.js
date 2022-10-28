@@ -1,17 +1,17 @@
 import React, { useContext } from 'react';
-import { Image, Tooltip } from 'react-bootstrap';
-
+import { Button, Image } from 'react-bootstrap';
 import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../Context/UseContext';
 import ReactTooltip from 'react-tooltip';
-
+import { ToogleContext } from '../App';
 const Navber = () => {
-  const { user, logOotsPage,theme, toggleTheme } = useContext(AuthContext)
+  const { user, logOotsPage } = useContext(AuthContext)
+  const { toggleTheme } = useContext(ToogleContext)
+
   return (
     <Navbar bg="light" expand="lg">
       <Container fluid>
@@ -25,25 +25,13 @@ const Navber = () => {
             style={{ maxHeight: '100px' }}
             navbarScroll
           >
-            
+
             <Nav.Link ><Link to='/'>Home</Link></Nav.Link>
             <Nav.Link ><Link to='/course' className='text-2xl'>Courses</Link></Nav.Link>
             <div className="header-toggle-buttons">
-        <button onClick={() => toggleTheme()}>{theme}</button>
-      </div>
 
-            <NavDropdown title="Thems" 
-             id="navbarScrollingDropdown">
-              <NavDropdown.Item href="#action3"></NavDropdown.Item>
-              <NavDropdown.Item href="#action4">
-              
-              </NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action5">
-
-              </NavDropdown.Item>
-            </NavDropdown>
-
+            </div>
+            <Button onClick={toggleTheme} > Thems Mode</Button>
           </Nav>
           <Form className="d-flex me-2">
 
@@ -55,8 +43,8 @@ const Navber = () => {
                 <ReactTooltip />
                 <button onClick={logOotsPage}>Log Out</button>
               </> : <>
-                  <Nav.Link ><Link className='me-2' to='/login'>Log In</Link></Nav.Link>
-                  <Nav.Link >    <Link to='/signUp' className='mx-2'>Sign Up</Link> </Nav.Link>
+                <Nav.Link ><Link className='me-2' to='/login'>Log In</Link></Nav.Link>
+                <Nav.Link >    <Link to='/signUp' className='mx-2'>Sign Up</Link> </Nav.Link>
                 <Nav>
 
                 </Nav>

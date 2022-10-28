@@ -7,10 +7,11 @@ const Home = () => {
         <div>
               <div>
                 <p className=''>
-                    <img src='https://media.istockphoto.com/vectors/web-development-concept-vector-id961274986?s=612x612'/>
+                    <img src='https://media.istockphoto.com/vectors/web-development-vector-id960530082?k=20&m=960530082&s=612x612&w=0&h=hkYLgbdWyLuU0YjWBOU2EH4BsA5D0bJbj1w3k776iLY='/>
                     
                 </p>
-                <h1><Link to='/course'>Visit Courses</Link></h1>
+                <h1><Link to='/course'>click Visit Courses</Link></h1>
+                
               </div>
         </div>
       

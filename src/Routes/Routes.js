@@ -25,13 +25,13 @@ children:[
     {
         path:'/course',
         element:<Course></Course>,
-        loader:()=>fetch('http://localhost:5000/homepage/')
+        loader:()=>fetch('https://learning-server-api-call.vercel.app/course/')
         
     },
     {
 path:'/detailspage/:id',
 element:<DetailsPage></DetailsPage>,
-loader: ({params})=>fetch(`http://localhost:5000/homepage/${params.id}`)
+loader: ({params})=>fetch(`https://learning-server-api-call.vercel.app/course/${params.id}`)
 
     },
     {
@@ -55,7 +55,7 @@ loader: ({params})=>fetch(`http://localhost:5000/homepage/${params.id}`)
     {
         path:'/primium/:id',
         element:<PrivetRouter><PrimiumAccess></PrimiumAccess></PrivetRouter>,
-        loader: ({params})=>fetch(`http://localhost:5000/homepage/${params.id}`)
+        loader: ({params})=>fetch(`https://learning-server-api-call.vercel.app/course/${params.id}`)
       
     },
     {

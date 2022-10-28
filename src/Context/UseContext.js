@@ -3,55 +3,12 @@ import { useState } from 'react';
 import {createUserWithEmailAndPassword, getAuth, GithubAuthProvider, GoogleAuthProvider, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile} from 'firebase/auth'
 import app from '../Firebase.Config/Firebase.Config';
 import { useEffect } from 'react';
-import PrimiumAccess from '../AllComponent/PremiumAccess/PrimiumAccess';
-
 export  const AuthContext = createContext()
 const githubProbider = new GithubAuthProvider();
 const googlrProvider = new GoogleAuthProvider();
-
 const auth = getAuth(app)
-
-
-
-// -----------toggle------------------
-
 const UseContext = ({children}) => {
     const [data,setData]= useState()
-    const getTheme = () => {
-        const theme = localStorage.getItem("theme");
-        if (!theme) {
-          // Default theme is taken as dark-theme
-          localStorage.setItem("theme", "dark-theme");
-          return "dark-theme";
-        } else {
-          return theme;
-        }
-      };
-      
-    
-    
-    // -------------------------
-    
-
-
-    // ----toggle---
-    const [theme, setTheme] = useState(getTheme);
-    const toggleTheme=()=> {
-        if (theme === "dark-theme") {
-          setTheme("light-theme");
-        } else {
-          setTheme("dark-theme");
-        }
-      };
-      useEffect(() => {
-        const refreshTheme = () => {
-          localStorage.setItem("theme", theme);
-        };
-        refreshTheme();
-    }, [theme]);
-
-    // -----------------
-
 const [user,setUsers]= useState()
 const [loader,setLoader]= useState(true);
 
@@ -61,8 +18,6 @@ const githuSignInAcco = ()=>{
     return signInWithPopup(auth,githubProbider);
 }
 // ----------------
-
-
 // new user Create
 const newUserCreate= (email,password)=>{
     setLoader(true)
@@ -81,7 +36,6 @@ const logOotsPage = ()=>{
 
     return signOut(auth);
 }
-
 
 // ---------------------
 // google sign in-
@@ -108,19 +62,12 @@ const unsubsCriber = onAuthStateChanged(auth,currentUser=>{
    },[] 
 )
 // -------------
-
-
-
-
-
-
-const allInfoData = {user,loader,setLoader,newUserCreate,githuSignInAcco,googleSignInAccoun,newUserCreate,ProfileUpdates,logOotsPage,logInPage,loader, theme,
-    setTheme,
-    toggleTheme,data,setData }
+const allInfoData = {user,loader,setLoader,newUserCreate,githuSignInAcco,googleSignInAccoun,newUserCreate,ProfileUpdates,logOotsPage,logInPage,loader,data,setData }
     return (
         <div>
             <AuthContext.Provider value={allInfoData}>
                 {children}
+            
             </AuthContext.Provider>
             
         </div>

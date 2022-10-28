@@ -21,7 +21,7 @@ const {setData}= useContext(AuthContext)
         <div className='mx-auto' >
           <div className='div-container w-75 mx-auto'>
           <Card className='card-container rounded ' style={{ width: '' }}>
-      <Card.Img variant="top" src={img} />
+      <Card.Img variant="top" className='img-fluid w-100 h-auto'  src={img} />
       <Card.Body className='d-color'>
         <Card.Title className='titles'>{name}</Card.Title>
         <Card.Text>
