@@ -13,7 +13,15 @@ const Navber = () => {
   const { toggleTheme } = useContext(ToogleContext)
 
   return (
-    <Navbar bg="light" expand="lg">
+
+
+    <div>
+    
+
+
+
+
+ <Navbar bg="light" expand="lg">
       <Container fluid>
         <Image className='rounded-circle mx-2' style={{ width: '40px' }} src='https://cdn-icons-png.flaticon.com/512/1688/1688451.png'></Image>
         <Navbar.Brand style={{ color: '', font: 'bold' }} className='text-primary'>Learn Skills</Navbar.Brand>
@@ -52,7 +60,7 @@ const Navber = () => {
 
 
             }
-            <Nav.Link ><Link to='/faq' className='mx-2 '>FAQ</Link></Nav.Link>
+            <Nav.Link ><Link to='/faq' className='px-4 pt-3 '>FAQ</Link></Nav.Link>
             <Nav.Link ><Link to='/blog' className='mx-2 '>Blog</Link></Nav.Link>
 
           </Form>
@@ -60,6 +68,8 @@ const Navber = () => {
 
       </Container>
     </Navbar>
+    </div>
+   
   );
 };
 
